@@ -6,7 +6,7 @@ const hbs = require('hbs')
 
 const app = express()
 
-const post = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 //Sets up file and directory paths for express config.
 const filePath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname, '../template/views')
