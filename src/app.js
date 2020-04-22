@@ -6,6 +6,7 @@ const hbs = require('hbs')
 
 const app = express()
 
+const post = process.env.PORT || 3000
 //Sets up file and directory paths for express config.
 const filePath = path.join(__dirname,'../public')
 const viewPath = path.join(__dirname, '../template/views')
@@ -99,6 +100,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000.')
+app.listen(port,()=>{
+    console.log('Server is up on port '+port+'.')
 })
