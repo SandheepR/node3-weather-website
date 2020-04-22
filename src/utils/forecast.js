@@ -12,8 +12,8 @@ const forecast=(latitude,longitude,callback)=>{
               callback('Invalid coordinates!',undefined)
          }
     
-         else {
-              callback(undefined,body.daily.data[0].summary+'It is currently '+body.currently.temperature+' degrees out.'+'There is '+body.currently.precipProbability+' probability of chance of rain.')
+         else {   
+          callback(undefined,body.daily.data[0].summary+'Highest temperature is '+body.daily.data[0].temperatureHigh+' and lowest temperature is '+body.daily.data[0].temperatureLow+'.It is currently '+body.currently.temperature+' degrees out.'+'There is '+body.currently.precipProbability+' probability of chance of rain.'+'Precipitation type is '+body.daily.data[0].precipType+'.')
 
          }
        
